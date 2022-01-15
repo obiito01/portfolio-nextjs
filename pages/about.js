@@ -78,9 +78,9 @@ export default function About() {
             variants={leftDivVariant}
           >
             <Image
-              src="/images/aboutme.svg "
-              width="800"
-              height="500"
+              src="/images/avatar.svg "
+              width="600"
+              height="600"
               className=""
             />
           </motion.div>
