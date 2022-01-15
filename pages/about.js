@@ -60,7 +60,7 @@ export default function About() {
   };
 
   return (
-    <main className="bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-300 transition-colors duration-300 text-neutral-800 overflow-y-hidden">
+    <main className="bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-300 transition-colors duration-300 text-neutral-800 overflow-hidden">
       <motion.section
         variants={divVariant}
         initial="init"
@@ -79,15 +79,15 @@ export default function About() {
           >
             <Image
               src="/images/aboutme.svg "
-              width="400"
-              height="300"
+              width="800"
+              height="500"
               className=""
             />
           </motion.div>
           {/* right */}
           <motion.div
             variants={rightDivVariant}
-            className="basis-[50%] text-left p-5 md:p-0"
+            className="basis-[50%] text-left p-5 md:p-3"
           >
             <motion.p
               variants={rightDivChildVariant}

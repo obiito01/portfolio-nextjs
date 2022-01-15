@@ -89,6 +89,9 @@ const Navbar = () => {
                 <li
                   key={link.slug}
                   className="py-3 px-10 text-center hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-md cursor-pointer transition duration-300"
+                  onClick={() => {
+                    setIsDropdownOpen(false);
+                  }}
                 >
                   <Link href={link.slug}>
                     <a>{link.title}</a>
