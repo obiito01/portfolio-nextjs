@@ -68,7 +68,7 @@ export default function Home() {
 
   return (
     <main className="bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-300 transition-colors duration-300 text-neutral-800">
-      <section className="max-w-[1200px] mx-auto sm:h-screen-no-nav flex  flex-col-reverse sm:flex-row items-center p-10 md:p-5 gap-10 sm:gap-0">
+      <section className="max-w-[1200px] mx-auto sm:h-screen-no-nav flex  flex-col-reverse sm:flex-row items-center p-3 md:p-5 gap-10 sm:gap-0">
         {/* left */}
 
         <motion.div
@@ -76,7 +76,7 @@ export default function Home() {
           initial="init"
           animate="anim"
           exit="exit"
-          className="basis-[60%]"
+          className="basis-[60%] px-5 sm:p-2"
         >
           <motion.h1
             variants={leftDivChildVariant}
@@ -114,7 +114,7 @@ export default function Home() {
           variants={rightDivVariant}
           initial="init"
           animate="anim"
-          className="basis-[40%] grid place-items-center overflow-hidden  w-full"
+          className="basis-[40%] grid place-items-center overflow-hidden w-full ring-2"
         >
           <motion.div variants={imgVariant}>
             <Image src="/images/avatar.svg" width="350" height="350" />

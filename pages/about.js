@@ -65,18 +65,21 @@ export default function About() {
         variants={divVariant}
         initial="init"
         animate="anim"
-        className="max-w-[1200px] mx-auto h-screen-no-nav text-center py-10 flex flex-col"
+        className="max-w-[1200px] mx-auto md:h-screen-no-nav text-center py-10 flex flex-col p-2 md:p-5"
       >
         <h1 className="text-3xl font-medium mb-5">About Me</h1>
-        <h3 className="text-base font-normal">
+        <h3 className="text-base font-normal mb-5">
           A hardworking and passionate web developer.
         </h3>
-        <div className="flex-1 flex full items-center">
+        <div className="flex-1 flex flex-col md:flex-row gap-5 md:gap-4 full items-center">
           {/* left */}
-          <motion.div className="basis-[50%]" variants={leftDivVariant}>
+          <motion.div
+            className="basis-[50%] w-full px-5 md:px-0"
+            variants={leftDivVariant}
+          >
             <Image
               src="/images/aboutme.svg "
-              width="500"
+              width="400"
               height="300"
               className=""
             />
@@ -84,11 +87,11 @@ export default function About() {
           {/* right */}
           <motion.div
             variants={rightDivVariant}
-            className="basis-[50%] text-left"
+            className="basis-[50%] text-left p-5 md:p-0"
           >
             <motion.p
               variants={rightDivChildVariant}
-              className="w-[90%] mb-5 text-xl font-normal"
+              className="md:w-[90%] mb-5 text-lg md:text-xl font-normal"
             >
               STEM graduate with great interest and skills in Web Development.
               Excellent skills and experience. Always love to learn different
@@ -100,7 +103,7 @@ export default function About() {
                 <motion.li
                   variants={rightDivChildVariant}
                   key={index}
-                  className="text-xl font-normal"
+                  className="text-lg md:text-xl font-normal"
                 >
                   <MdKeyboardArrowRight className="inline" size={24} />{" "}
                   {bullet.content}
@@ -109,7 +112,7 @@ export default function About() {
             </ul>
             <button
               variants={rightDivChildVariant}
-              className="py-4 px-4 rounded-md bg-neutral-200 text-lg hover:ring-2 ring-violet-500 ring-inset transition duration-300 dark:bg-neutral-700"
+              className="py-4 px-4 rounded-md bg-neutral-200 text-base md:text-lg hover:ring-2 ring-violet-500 ring-inset transition duration-300 dark:bg-neutral-700"
             >
               Download CV{" "}
               <AiOutlineCloudDownload className="inline" size={24} />
