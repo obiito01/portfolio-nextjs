@@ -77,12 +77,7 @@ export default function About() {
             className="basis-[50%] w-full px-5 md:px-0"
             variants={leftDivVariant}
           >
-            <Image
-              src="/images/avatar.svg "
-              width="600"
-              height="600"
-              className=""
-            />
+            <img src="/images/aboutme.svg " className="w-full" />
           </motion.div>
           {/* right */}
           <motion.div
