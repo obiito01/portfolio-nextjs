@@ -14,16 +14,8 @@ const navlinks = [
     slug: "/about",
   },
   {
-    title: "Skills",
-    slug: "/skills",
-  },
-  {
     title: "Portfolio",
     slug: "/portfolio",
-  },
-  {
-    title: "Contact",
-    slug: "/contact",
   },
 ];
 
@@ -52,8 +44,23 @@ const Navbar = () => {
       setIsDarkTheme(false);
     }
   };
+
+  const rotateVariant = {
+    init: {
+      rotate: 0,
+    },
+    anim: {
+      rotate: 360,
+      transition: {
+        repeat: Infinity,
+        duration: 5,
+        ease: "linear",
+      },
+    },
+  };
+
   return (
-    <header className="h-[80px] w-full border-b text-neutral-800 bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-300 dark:border-b-neutral-700 duration-300 ">
+    <header className="sticky top-0 z-50 h-[80px] w-full border-b text-neutral-800 bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-300 dark:border-b-neutral-700 duration-300 ">
       <div className="max-w-[1200px] mx-auto h-full  flex items-center justify-between px-5">
         <div>
           <Link href="/">
@@ -65,12 +72,23 @@ const Navbar = () => {
 
         {/* mobile and tablets only */}
         <div className="md:hidden flex gap-5 items-center relative h-full">
-          <span
-            className="bg-neutral-200 dark:bg-neutral-700 rounded-md p-2 cursor-pointer hover:text-yellow-500 duration-300"
+          <div
+            className="bg-neutral-200 dark:bg-neutral-700 rounded-md p-2 cursor-pointer text-yellow-500 duration-300"
             onClick={() => handleTheme()}
           >
-            {isDarkTheme ? <BsMoonFill size={24} /> : <BsSunFill size={24} />}
-          </span>
+            <motion.div
+              whileInView={{
+                rotate: 720,
+              }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
+              {isDarkTheme ? <BsMoonFill size={20} /> : <BsSunFill size={20} />}
+            </motion.div>
+          </div>
           <div
             className="md:hidden  p-1 rounded-md dark:ring-1 ring-inset  bg-neutral-200 dark:bg-neutral-800 dark:ring-neutral-500 text-neutral-700 cursor-pointer dark:text-neutral-300"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -114,12 +132,14 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <span
-            className="bg-neutral-200 dark:bg-neutral-700 rounded-md p-2 cursor-pointer hover:text-yellow-500 duration-300"
+          <div
+            className="bg-neutral-200 dark:bg-neutral-700 rounded-md p-2 cursor-pointer text-yellow-500 duration-300"
             onClick={() => handleTheme()}
           >
-            {isDarkTheme ? <BsMoonFill size={20} /> : <BsSunFill size={20} />}
-          </span>
+            <motion.div variants={rotateVariant} initial="init" animate="anim">
+              {isDarkTheme ? <BsMoonFill size={20} /> : <BsSunFill size={20} />}
+            </motion.div>
+          </div>
         </nav>
       </div>
     </header>

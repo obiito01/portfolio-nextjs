@@ -8,3 +8,10 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+body {
+  @apply dark:bg-neutral-800;
+  @apply bg-neutral-50;
+  @apply dark:text-neutral-300;
+  @apply text-neutral-800;
+}

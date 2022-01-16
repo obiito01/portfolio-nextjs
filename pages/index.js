@@ -26,7 +26,7 @@ export default function Home() {
       rotate: 360,
       transition: {
         repeat: Infinity,
-        duration: 30,
+        duration: 10,
         ease: "linear",
       },
     },
