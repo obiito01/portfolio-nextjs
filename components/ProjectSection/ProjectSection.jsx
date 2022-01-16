@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { myProjects } from "./data";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 const ProjectSection = () => {
   const controls = useAnimation();
@@ -87,6 +88,7 @@ const ProjectSection = () => {
         <a
           href="http://github.com/obiito01"
           target="_blank"
+          rel="noreferrer"
           className="text-violet-500 font-medium hover:text-violet-700 transition-colors duration-300"
         >
           GitHub
@@ -104,11 +106,16 @@ const ProjectSection = () => {
         <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {myProjects.map((project) => (
             // project card
-            <div className="w-full h-[300px] md:h-[600px] bg-neutral-600 relative group cursor-pointer md:first:col-span-2 md:last:col-span-2">
-              <img
+            <div
+              className="w-full h-[300px] md:h-[600px] bg-neutral-600 relative group cursor-pointer md:first:col-span-2 md:last:col-span-2"
+              key={project.title}
+            >
+              <Image
                 src={project.image}
                 alt={project.title}
-                className="h-full w-full object-cover brightness-[0.9] group-hover:brightness-50 transition duration-500"
+                layout="fill"
+                objectFit="cover"
+                className="brightness-[0.9] group-hover:brightness-50 transition duration-500"
               />
 
               <h1

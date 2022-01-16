@@ -69,7 +69,7 @@ export default function About() {
       >
         <h1 className="text-6xl font-extralight mb-2">About Me</h1>
         <h3 className="text-lg font-extralight">
-          "Passionate and hardworking."
+          &quot;Passionate and hardworking.&quot;
         </h3>
         <div className="flex-1 flex flex-col md:flex-row gap-5 md:gap-4 full items-center">
           {/* left */}
