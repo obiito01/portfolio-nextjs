@@ -28,7 +28,7 @@ const profile = () => {
         <h1 className="text-center text-6xl font-extralight mb-2">
           Portfolio.
         </h1>
-        <p className="text-center font-extralight text-lg max-w-[80%]">
+        <p className="text-center font-extralight text-lg max-w-[80%] mx-auto">
           &quot;I don&apos;t just sell websites, I create websites that
           SELL.&quot;
         </p>
