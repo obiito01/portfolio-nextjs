@@ -81,6 +81,7 @@ export default function About() {
               src="/images/aboutme.svg"
               width="100%"
               height="100%"
+              alt="about"
               layout="responsive"
               objectFit="contain"
             />

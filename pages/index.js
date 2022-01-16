@@ -117,7 +117,12 @@ export default function Home() {
           className="basis-[50%] grid place-items-center overflow-hidden w-full"
         >
           <motion.div variants={imgVariant}>
-            <Image src="/images/avatar.svg" width="320" height="320" />
+            <Image
+              src="/images/avatar.svg"
+              width="320"
+              height="320"
+              alt="avatar"
+            />
           </motion.div>
         </motion.div>
       </section>

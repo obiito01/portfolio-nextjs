@@ -29,7 +29,8 @@ const profile = () => {
           Portfolio.
         </h1>
         <p className="text-center font-extralight text-lg">
-          &quot;I don't just sell websites, I create websites that SELL.&quot;
+          &quot;I don&apos;t just sell websites, I create websites that
+          SELL.&quot;
         </p>
       </motion.div>
       <SkillsSection />
