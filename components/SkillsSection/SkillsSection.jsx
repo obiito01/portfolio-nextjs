@@ -126,7 +126,7 @@ const SkillsSection = () => {
                 initial="init"
                 animate="anim"
                 exit="exit"
-                className="mx-4 p-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center ring-2 ring-neutral-200 dark:ring-neutral-600 dark:bg-neutral-700 bg-neutral-100 rounded-md mb-10"
+                className="p-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center ring-2 ring-neutral-200 dark:ring-neutral-600 dark:bg-neutral-700 bg-neutral-100 rounded-md mb-10"
               >
                 {frontendSkills.map((skill) => (
                   <SkillItem {...skill} key={skill.title} />
@@ -164,7 +164,7 @@ const SkillsSection = () => {
                 initial="init"
                 animate="anim"
                 exit="exit"
-                className="mx-4 p-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center ring-2 ring-neutral-200 dark:ring-neutral-600 dark:bg-neutral-700 bg-neutral-100 rounded-md mb-10"
+                className="p-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center ring-2 ring-neutral-200 dark:ring-neutral-600 dark:bg-neutral-700 bg-neutral-100 rounded-md mb-10"
               >
                 {backendSkills.map((skill) => (
                   <SkillItem {...skill} key={skill.title} />
