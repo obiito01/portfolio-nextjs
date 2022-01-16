@@ -11,7 +11,9 @@ const SkillItem = ({ title, image }) => {
         objectFit="contain"
         className="select-none"
       />
-      <p className="mt-2 font-medium text-xl select-none">{title}</p>
+      <p className="mt-2 font-medium text-xl select-none text-center">
+        {title}
+      </p>
     </div>
   );
 };
