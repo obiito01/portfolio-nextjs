@@ -3,6 +3,8 @@ import { motion, useAnimation } from "framer-motion";
 import { myProjects } from "./data";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+import { MdWebAsset } from "react-icons/md";
+import { BsGithub } from "react-icons/bs";
 
 const ProjectSection = () => {
   const controls = useAnimation();
@@ -107,25 +109,51 @@ const ProjectSection = () => {
           {myProjects.map((project) => (
             // project card
             <div
-              className="w-full h-[300px] md:h-[600px] bg-neutral-600 relative group cursor-pointer md:first:col-span-2 md:last:col-span-2"
+              className="w-full h-[300px] md:h-[600px] bg-neutral-600 relative group md:first:col-span-2 md:last:col-span-2"
               key={project.title}
+              href={project.live}
             >
               <Image
                 src={project.image}
                 alt={project.title}
                 layout="fill"
                 objectFit="cover"
-                className="brightness-[0.9] group-hover:brightness-50 transition duration-500"
+                className="brightness-[0.7] group-hover:brightness-50 transition duration-500"
               />
-
-              <h1
-                className={`text-3xl font-bold absolute top-5 md:top-10 left-5 text-neutral-200 transition-all duration-1000`}
-              >
-                {project.title}
-              </h1>
+              <div className="absolute top-5 left-5">
+                <h1
+                  className={`text-3xl font-bold text-neutral-200 mb-2 duration-300`}
+                >
+                  {project.title}
+                </h1>
+              </div>
               <p className="absolute bottom-5 left-0 px-5 opacity-0 group-hover:opacity-100 transition duration-500 text-neutral-300">
                 {project.desc}
               </p>
+              <div className="absolute top-5 right-5 flex flex-col gap-4">
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="py-3 px-4 bg-neutral-200 text-neutral-700 rounded-md inline-block duration-300 hover:bg-neutral-400 relative"
+                >
+                  <BsGithub size={22} />
+                  <span className="absolute right-[110%] top-[50%] translate-y-[-50%] group-hover:opacity-100 opacity-0 text-neutral-200 duration-300 font-medium">
+                    GitHub
+                  </span>
+                </a>
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="py-3 px-4 bg-neutral-200 text-neutral-700 rounded-md inline-block duration-300 hover:bg-neutral-400 relative"
+                >
+                  <MdWebAsset size={22} />
+                  <span className="absolute right-[110%] top-[50%] translate-y-[-50%] group-hover:opacity-100 opacity-0 text-neutral-200 duration-300 font-medium">
+                    Live
+                  </span>
+                </a>
+              </div>
             </div>
           ))}
         </div>

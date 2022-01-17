@@ -17,6 +17,10 @@ const navlinks = [
     title: "Portfolio",
     slug: "/portfolio",
   },
+  {
+    title: "Contact",
+    slug: "/contact",
+  },
 ];
 
 const Navbar = () => {
@@ -76,16 +80,7 @@ const Navbar = () => {
             className="bg-neutral-200 dark:bg-neutral-700 rounded-md p-2 cursor-pointer text-yellow-500 duration-300"
             onClick={() => handleTheme()}
           >
-            <motion.div
-              whileInView={{
-                rotate: 720,
-              }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
-            >
+            <motion.div variants={rotateVariant} initial="init" animate="anim">
               {isDarkTheme ? <BsMoonFill size={20} /> : <BsSunFill size={20} />}
             </motion.div>
           </div>

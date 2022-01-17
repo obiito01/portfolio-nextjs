@@ -25,7 +25,7 @@ const profile = () => {
         animate="anim"
         initial="init"
       >
-        <h1 className="text-center text-6xl font-extralight mb-2">
+        <h1 className="text-center text-5xl font-extralight mb-2">
           Portfolio.
         </h1>
         <p className="text-center font-extralight text-lg max-w-[80%] mx-auto">

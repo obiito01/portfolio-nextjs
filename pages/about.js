@@ -67,7 +67,7 @@ export default function About() {
         animate="anim"
         className="max-w-[1200px] mx-auto md:h-screen-no-nav text-center flex flex-col py-20 px-2 md:px-5"
       >
-        <h1 className="text-6xl font-extralight mb-2">About Me</h1>
+        <h1 className="text-5xl font-extralight mb-2">About Me</h1>
         <h3 className="text-lg font-extralight">
           &quot;Passionate and hardworking.&quot;
         </h3>
@@ -116,10 +116,14 @@ export default function About() {
                 </motion.li>
               ))}
             </ul>
-            <button className="py-4 px-4 rounded-md bg-neutral-200 text-base md:text-lg hover:ring-2 ring-violet-500 ring-inset transition duration-300 dark:bg-neutral-700">
+            <a
+              href="/CV2022.pdf"
+              download="CV"
+              className="py-4 px-4 rounded-md bg-neutral-200 text-base md:text-lg hover:ring-2 ring-violet-500 ring-inset transition duration-300 dark:bg-neutral-700"
+            >
               Download CV{" "}
               <AiOutlineCloudDownload className="inline" size={24} />
-            </button>
+            </a>
           </motion.div>
         </div>
       </motion.section>
