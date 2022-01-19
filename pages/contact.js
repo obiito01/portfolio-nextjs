@@ -95,6 +95,7 @@ export default function Contact() {
           >
             <Image
               src="/images/contact.svg"
+              alt="contact"
               height={400}
               width={400}
               objectFit="contain"
