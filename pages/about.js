@@ -109,7 +109,7 @@ export default function About() {
                 </span>{" "}
                 my programming skills. <br />
                 <br /> My current programming languages includes{" "}
-                <span className="text-violet-500 font-medium">JavaScript</span>
+                <span className="text-violet-500 font-medium">JavaScript </span>
                 and <span className="text-violet-500 font-medium">Python</span>,
                 and my current stack includes{" "}
                 <span className="text-violet-500 font-medium">ReactJS</span>,{" "}
