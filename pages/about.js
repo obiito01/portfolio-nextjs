@@ -6,9 +6,9 @@ import Head from "next/head";
 
 const bulletPoints = [
   { content: "Graduated in 2021" },
-  { content: "MERN Stack" },
+  { content: "Passionate to Learn" },
   { content: "Adopt Best Practices" },
-  { content: "20+ Personal Projects" },
+  { content: "20+ Projects" },
 ];
 
 export default function About() {
@@ -73,7 +73,7 @@ export default function About() {
           className="max-w-[1200px] mx-auto md:h-screen-no-nav text-center flex flex-col py-20 px-2 md:px-5"
         >
           <h1 className="text-5xl font-extralight mb-2">About Me</h1>
-          <h3 className="text-lg font-extralight">
+          <h3 className="text-xl font-extralight">
             &quot;Passionate and hardworking.&quot;
           </h3>
           <div className="flex-1 flex flex-col md:flex-row gap-5 md:gap-4 full items-center">
@@ -100,14 +100,23 @@ export default function About() {
                 variants={rightDivChildVariant}
                 className="md:w-[90%] mb-5 text-lg md:text-xl font-normal"
               >
-                STEM graduate with great interest in Web Development. Excellent
-                skills and project experience. Always love to learn different
-                stacks of technologies, including{" "}
-                <span className="text-violet-500 font-medium">ReactJs</span>,{" "}
+                STEM graduate with great interest in Software Engineering.
+                Excellent skills and project experience. Always love to{" "}
+                <span className="text-violet-500 font-medium">learn </span>
+                new technologies and{" "}
+                <span className="text-violet-500 font-medium">
+                  strengthen
+                </span>{" "}
+                my programming skills. <br />
+                <br /> My current programming languages includes{" "}
+                <span className="text-violet-500 font-medium">JavaScript</span>,
+                and <span className="text-violet-500 font-medium">Python</span>,
+                and my current stack includes{" "}
+                <span className="text-violet-500 font-medium">ReactJS</span>,{" "}
                 <span className="text-violet-500 font-medium">Next.js</span>,{" "}
                 <span className="text-violet-500 font-medium">Express.js</span>,{" "}
                 <span className="text-violet-500 font-medium">MongoDB</span>,
-                and more.
+                and more!
               </motion.p>
               <ul className="mb-10">
                 {bulletPoints.map((bullet, index) => (

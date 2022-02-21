@@ -15,3 +15,19 @@ body {
   @apply dark:text-neutral-300;
   @apply text-neutral-800;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-400;
+  @apply dark:bg-neutral-300;
+  @apply rounded-lg;
+}

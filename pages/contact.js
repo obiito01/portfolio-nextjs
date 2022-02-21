@@ -46,6 +46,19 @@ export default function Contact() {
     },
   };
 
+  const levitateVariant = {
+    init: { opacity: 1 },
+    anim: {
+      opacity: 1,
+      y: [0, 5, -5, 5, 0],
+      transition: {
+        duration: 6,
+        repeat: Infinity,
+        repeatType: "loop",
+      },
+    },
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -73,12 +86,12 @@ export default function Contact() {
       <Head>
         <title>Jethro | Contact</title>
       </Head>
-      <main className="max-w-[1200px] mx-auto px-5 h-screen-no-nav min-h-[600px] flex flex-col justify-center gap-5 overflow-hidden">
+      <main className="max-w-[1200px] mx-auto px-5 md:h-screen-no-nav min-h-[600px] flex flex-col justify-center gap-5 overflow-hidden py-10 md:py-0">
         <motion.header variants={headerVariant} initial="init" animate="anim">
-          <h1 className="text-center text-5xl font-light mb-2">
+          <h1 className="text-center text-4xl md:text-5xl font-light mb-2">
             Like my work?
           </h1>
-          <h1 className="text-center text-lg font-light">
+          <h1 className="text-center text-base md:text-lg font-light">
             Leave a <span className="text-violet-500">message</span>!
           </h1>
         </motion.header>
@@ -93,13 +106,15 @@ export default function Contact() {
             variants={imgVariant}
             className="flex-1  grid place-items-center"
           >
-            <Image
-              src="/images/contact.svg"
-              alt="contact"
-              height={400}
-              width={400}
-              objectFit="contain"
-            />
+            <motion.div variants={levitateVariant}>
+              <Image
+                src="/images/contact.svg"
+                alt="contact"
+                height={400}
+                width={400}
+                objectFit="contain"
+              />
+            </motion.div>
           </motion.div>
           {/* right */}
           {isEmailSent ? (

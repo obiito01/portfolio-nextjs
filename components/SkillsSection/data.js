@@ -1,3 +1,18 @@
+export const programmingLanguage = [
+  {
+    title: "JavaScript",
+    image: "/images/js.svg",
+  },
+  {
+    title: "Python",
+    image: "/images/python.svg",
+  },
+  {
+    title: "C#",
+    image: "/images/csharp.svg",
+  },
+];
+
 export const frontendSkills = [
   {
     title: "HTML5",
@@ -6,11 +21,6 @@ export const frontendSkills = [
   {
     title: "CSS3",
     image: "/images/css.svg",
-  },
-
-  {
-    title: "JavaScript",
-    image: "/images/js.svg",
   },
   {
     title: "ReactJS",

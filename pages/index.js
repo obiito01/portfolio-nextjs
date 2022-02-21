@@ -94,13 +94,13 @@ export default function Home() {
               variants={leftDivChildVariant}
               className="text-xl md:text-2xl font-normal mb-5"
             >
-              Frontend developer
+              Software Engineer
             </motion.h3>
             <motion.p
               variants={leftDivChildVariant}
               className="text-base md:text-lg font-light w-[80%] mb-10"
             >
-              High level experience in web design and development knowledge,
+              High level experience in software engineering and development,
               producing quality work.
             </motion.p>
             <motion.div variants={leftDivChildVariant} className="flex gap-5">

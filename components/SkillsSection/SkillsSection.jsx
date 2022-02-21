@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
-import { frontendSkills, backendSkills } from "./data";
+import { frontendSkills, backendSkills, programmingLanguage } from "./data";
 import { SkillItem } from "..";
 
 const SkillsSection = () => {
-  const [isFrontendDropdownOpen, setIsFrontendDropdownOpen] = useState(true);
-  const [isBackendDropdownOpen, setIsBackendDropdownOpen] = useState(true);
+  const [isFrontendDropdownOpen, setIsFrontendDropdownOpen] = useState(false);
+  const [isBackendDropdownOpen, setIsBackendDropdownOpen] = useState(false);
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
 
   const headerVariant = {
     init: {
@@ -94,6 +95,45 @@ const SkillsSection = () => {
         exit="exit"
         className="py-10"
       >
+        {/* programming languages */}
+        <div>
+          {/* dropdown header */}
+          <div
+            className="items-center gap-2 inline-block cursor-pointer group  mb-4"
+            onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
+          >
+            <div className="flex items-center group-hover:text-violet-500 duration-300">
+              {isFrontendDropdownOpen ? (
+                <MdKeyboardArrowDown size={32} />
+              ) : (
+                <MdKeyboardArrowRight size={32} />
+              )}
+              <span className="text-2xl select-none">Programming Language</span>
+            </div>
+          </div>
+          <p className="ml-4 mb-5">
+            A programming language is any set of rules that converts strings, or
+            graphical program elements in the case of visual programming
+            languages, to various kinds of machine code output. Programming
+            languages are one kind of computer language, and are used in
+            computer programming to implement algorithms.
+          </p>
+          <AnimatePresence>
+            {isLanguageDropdownOpen && (
+              <motion.div
+                variants={contentVariant}
+                initial="init"
+                animate="anim"
+                exit="exit"
+                className="p-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center ring-2 ring-neutral-200 dark:ring-neutral-600 dark:bg-neutral-700 bg-neutral-100 rounded-md mb-10"
+              >
+                {programmingLanguage.map((skill) => (
+                  <SkillItem {...skill} key={skill.title} />
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
         {/* frontend skills */}
         <div>
           {/* dropdown header */}
