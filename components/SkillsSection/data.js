@@ -8,8 +8,16 @@ export const programmingLanguage = [
     image: "/images/python.svg",
   },
   {
+    title: "Kotlin",
+    image: "/images/kotlin.svg",
+  },
+  {
     title: "C#",
     image: "/images/csharp.svg",
+  },
+  {
+    title: "Java",
+    image: "/images/java.svg",
   },
 ];
 
