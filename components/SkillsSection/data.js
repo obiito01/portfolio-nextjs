@@ -4,20 +4,16 @@ export const programmingLanguage = [
     image: "/images/js.svg",
   },
   {
-    title: "Python",
-    image: "/images/python.svg",
+    title: "Java",
+    image: "/images/java.svg",
   },
   {
-    title: "Kotlin",
-    image: "/images/kotlin.svg",
+    title: "PHP",
+    image: "/images/php.svg",
   },
   {
     title: "C#",
     image: "/images/csharp.svg",
-  },
-  {
-    title: "Java",
-    image: "/images/java.svg",
   },
 ];
 
@@ -33,6 +29,10 @@ export const frontendSkills = [
   {
     title: "ReactJS",
     image: "/images/react.svg",
+  },
+  {
+    title: "Redux",
+    image: "/images/redux.svg",
   },
   {
     title: "Next.js",
@@ -59,10 +59,6 @@ export const frontendSkills = [
   {
     title: "Material UI",
     image: "/images/materialui.svg",
-  },
-  {
-    title: "Redux",
-    image: "/images/redux.svg",
   },
 ];
 
