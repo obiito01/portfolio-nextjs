@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FcContacts } from "react-icons/fc";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -105,16 +105,25 @@ export default function Home() {
             </motion.p>
             <motion.div variants={leftDivChildVariant} className="flex gap-5">
               <a
+                href="https://www.linkedin.com/in/galongau/"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center px-4 py-4 bg-neutral-200 dark:bg-neutral-700 rounded-md transition duration-300 hover:ring-2 ring-violet-500 ring-inset font-medium"
+              >
+                <span className="mr-2">LinkedIn</span>
+                <BsLinkedin size={22} className="inline-block" />
+              </a>
+              <a
                 href="https://github.com/obiito01"
                 target="_blank"
                 rel="noreferrer"
-                className="px-4 py-4 bg-neutral-200 dark:bg-neutral-700 rounded-md transition duration-300 hover:ring-2 ring-violet-500 ring-inset font-medium"
+                className="flex items-center px-4 py-4 bg-neutral-200 dark:bg-neutral-700 rounded-md transition duration-300 hover:ring-2 ring-violet-500 ring-inset font-medium"
               >
                 <span className="mr-2">GitHub</span>
                 <BsGithub size={22} className="inline-block" />
               </a>
               <Link href="/contact">
-                <a className="px-4 py-4 bg-neutral-200 dark:bg-neutral-700 rounded-md mr-5 transition duration-300 hover:ring-2 ring-violet-500 ring-inset font-medium">
+                <a className="flex items-center px-4 py-4 bg-neutral-200 dark:bg-neutral-700 rounded-md mr-5 transition duration-300 hover:ring-2 ring-violet-500 ring-inset font-medium">
                   <span className="mr-2">Contact</span>
                   <FcContacts size={20} className="inline-block" />
                 </a>

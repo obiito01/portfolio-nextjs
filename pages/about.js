@@ -131,8 +131,8 @@ export default function About() {
                 ))}
               </ul>
               <a
-                href="/CV2022.pdf"
-                download="CV"
+                href="/jethro-cv-2022.pdf"
+                download="JETHRO_CV_2022"
                 className="py-4 px-4 rounded-md bg-neutral-200 text-base md:text-lg hover:ring-2 ring-violet-500 ring-inset transition duration-300 dark:bg-neutral-700"
               >
                 Download CV{" "}
